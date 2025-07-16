@@ -40,7 +40,7 @@ export function FundoResponsivo() {
       <Image
         src={ImagemMobile}
         alt="Imagem de fundo"
-        className="absolute top-0 left-0 z-0 h-screen w-screen bg-cover bg-center"
+        className="absolute -top-4 left-0 z-0 h-screen w-screen bg-cover bg-center"
       />
     );
   }
