@@ -1,22 +1,17 @@
 import Image from "next/image";
 import Tupalogo from "../../public/tupa.png";
-import TupaDesktop from "../../public/tupa-bg-desktop.png";
+// import TupaDesktop from "../../public/tupa-bg-desktop.png";
 import Engrenagem from "../../public/engrenagem.png";
 import { Poppins } from "next/font/google";
+import { FundoResponsivo } from "@/components/bg-img";
 
 const poppins = Poppins({ subsets: ["latin"], weight: "700" });
 
 export default function Home() {
   return (
 
-    <div className="h-screen w-screen flex justify-center items-center">
-      <Image
-        className="absolute top-0 left-0 z-0 h-screen w-screen bg-cover bg-center"
-        src={TupaDesktop}
-        alt="Mercado Tupã"
-        placeholder="blur" // Efeito de blur enquanto carrega
-      // priority={true} // Use 'priority' para imagens "acima da dobra" (a primeira que o usuário vê
-      />
+    <div className="h-dvh md:h-screen w-screen flex justify-center items-center">
+      <FundoResponsivo/>  
 
       <Image
         className="absolute z-1 top-5 w-40 sm:left-5  lg:left-1/2 lg:-translate-x-1/2 lg:w-52"
@@ -39,7 +34,7 @@ export default function Home() {
         // priority={true} // Use 'priority' para imagens "acima da dobra" (a primeira que o usuário vê
         />
 
-        <div className={`font-extrabold text-[#0163b4] text-3xl sm:text-4xl md:text-5xl lg:text-6xl ${poppins.className}`}>EM BREVE...</div>
+        <div className={`font-extrabold text-[#0163b4] text-3xl sm:text-4xl md:text-4xl lg:text-6xl ${poppins.className}`}>EM BREVE...</div>
       </div>
 
     </div>

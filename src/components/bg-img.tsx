@@ -16,7 +16,7 @@ export function FundoResponsivo() {
     setIsClient(true);
   }, []);
 
-  const isDesktop = useMediaQuery({ minWidth: 768 });
+  const isDesktop = useMediaQuery({ query: '(orientation: portrait)' });
 
 
 //evita erro de hidratação
@@ -30,7 +30,7 @@ export function FundoResponsivo() {
       <Image
         src={ImagemDesktop}
         alt="Imagem de fundo"
-        className="-z-10"
+        className="absolute top-0 left-0 z-0 h-screen w-screen bg-cover bg-center"
       />
 
     );
@@ -40,7 +40,7 @@ export function FundoResponsivo() {
       <Image
         src={ImagemMobile}
         alt="Imagem de fundo"
-        className="-z-10"
+        className="absolute top-0 left-0 z-0 h-screen w-screen bg-cover bg-center"
       />
     );
   }
